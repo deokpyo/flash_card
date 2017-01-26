@@ -1,22 +1,22 @@
 [
   {
-    "question": "... is that",
-    "answer": "Beer"
-  },
-  {
-    "question": "... do you like",
-    "answer": "Me"
-  },
-  {
-    "question": "... are you",
+    "full": "I love Dina",
+    "part": "I love ...",
     "answer": "Dina"
   },
   {
-    "question": "... do you want",
-    "answer": "Food"
+    "full": "Jimmy is the man",
+    "part": "... is the man",
+    "answer": "Jimmy"
   },
   {
-    "question": "... are we",
-    "answer": "People"
+    "full": "Because I love you",
+    "part": "Because I ... you",
+    "answer": "love"
+  },
+  {
+    "full": "Dina is the bomb",
+    "part": "Dina is the ...",
+    "answer": "bomb"
   }
 ]
