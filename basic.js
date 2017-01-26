@@ -4,6 +4,8 @@ var inquirer = require("inquirer");
 var main = require("./app.js");
 var data = require("./flashcard.json");
 var file = "flashcard.json";
+
+// global variable init
 var count = data.length;
 var score = 0;
 var num = 0;

@@ -4,6 +4,8 @@ var inquirer = require("inquirer");
 var main = require("./app.js");
 var cloze_data = require("./clozecard.json");
 var cloze_file = "clozecard.json";
+
+// global variable init
 var count = cloze_data.length;
 var score = 0;
 var num = 0;

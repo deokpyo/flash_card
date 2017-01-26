@@ -84,5 +84,7 @@ function inquireCommand() {
     });
 }
 
+// start the inquireMain
 inquireMain();
+// export inquireMain for navigation purpose
 module.exports.inquireMain = inquireMain;
