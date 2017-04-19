@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "question": "What's my name?",
+    "answer": "Jimmy Hong"
+  },
+  {
+    "question": "How old am I?",
+    "answer": "26"
+  },
+  {
+    "question": "What's the current year?",
+    "answer": "2017"
+  }
+]

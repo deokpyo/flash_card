@@ -101,6 +101,7 @@ var Cloze = function () {
                 }]).then(function (user) {
                     count = cloze_data.length;
                     num = 0;
+                    score = 0;
                     inquireOptions(user.command);
                 });
         }

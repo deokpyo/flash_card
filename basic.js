@@ -37,41 +37,47 @@ var Basic = function () {
 
     // function to delete a card with user selection   
     function deleteCard() {
-        // populate a new array with card questions
-        var cards = [];
-        for (i = 0; i < data.length; i++) {
-            cards.push(data[i].question);
+        if (data.length === 0) {
+            console.log('No more card to delete');
         }
-        inquirer.prompt([
-            {
-                type: "list",
-                message: "Select a question to delete",
-                choices: cards,
-                name: "card"
-            }
-        ]).then(function (user) {
-            // depending on user selection, remove the card from the data array then write to JSON
-            for (j = 0; j < data.length; j++) {
-                if (data[j].question === user.card) {
-                    data.splice(j, 1);
-                    writeJSON();
-                    console.log(user.card + ": has been deleted.")
-                }
+        else {
+            // populate a new array with card questions
+            var cards = [];
+            for (i = 0; i < data.length; i++) {
+                cards.push(data[i].question);
             }
             inquirer.prompt([
                 {
                     type: "list",
-                    message: "Select an Option Below:",
-                    choices: ["Delete More", "Main Menu"],
-                    name: "command"
-                }]).then(function (user) {
-                    inquireOptions(user.command);
-                });
-        });
+                    message: "Select a question to delete",
+                    choices: cards,
+                    name: "card"
+                }
+            ]).then(function (user) {
+                // depending on user selection, remove the card from the data array then write to JSON
+                for (j = 0; j < data.length; j++) {
+                    if (data[j].question === user.card) {
+                        data.splice(j, 1);
+                        writeJSON();
+                        console.log(user.card + ": has been deleted.")
+                    }
+                }
+                inquirer.prompt([
+                    {
+                        type: "list",
+                        message: "Select an Option Below:",
+                        choices: ["Delete More", "Main Menu"],
+                        name: "command"
+                    }]).then(function (user) {
+                        inquireOptions(user.command);
+                    });
+            });
+        }
     }
 
     // recursive function to play the flashcards
     function playCard() {
+        var data = require("./flashcard.json");
         if (count > 0) {
             inquirer.prompt([
                 {
@@ -101,6 +107,7 @@ var Basic = function () {
                 }]).then(function (user) {
                     count = data.length;
                     num = 0;
+                    score = 0;
                     inquireOptions(user.command);
                 });
         }

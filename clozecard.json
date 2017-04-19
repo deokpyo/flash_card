@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "full": "Jimmy is a Full Stack Developer.",
+    "part": "... is a Full Stack Developer.",
+    "answer": "Jimmy"
+  },
+  {
+    "full": "Jimmy is from South Korea.",
+    "part": "Jimmy is from ....",
+    "answer": "South Korea"
+  }
+]
