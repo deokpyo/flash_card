@@ -1,4 +1,4 @@
-# Flashcards: API that allows users to create two types of flashcards.
+#API that allows users to create two types of flashcards.
 
 ![picture alt](./preview1.png?raw=true "Preview 1")
 - - - -
